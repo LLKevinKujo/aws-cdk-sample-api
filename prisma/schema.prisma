@@ -1,0 +1,19 @@
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = "mysql://admin:admin1031@localhost:3306/sample_db"
+}
+//postgresql://postgres:postgres@localhost:5432/score_pit_db?schema=public
+model Player {
+  @@map("player")
+
+  id      Int @id() @default(autoincrement())
+  name    String
+  level   Int @default(1)
+  country String
+
+}
