@@ -4,10 +4,9 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
-  url      = "mysql://admin:admin1031@localhost:3306/sample_db"
+  provider = "postgresql"
+  url      = "postgresql://postgres:postgres@localhost:5432/sample_db?schema=public"
 }
-//postgresql://postgres:postgres@localhost:5432/score_pit_db?schema=public
 model Player {
   @@map("player")
 
